@@ -6,7 +6,24 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        setTemOuNaoNumDig(sc);
+           Set<Integer> setList = new HashSet<>();
+        setList.add(2);
+        setList.add(5);
+        setList.add(1);
+        setList.add(3);
+        setList.add(4);
+        setList.add(9);
+        setList.add(7);
+        setList.add(8);
+        setList.add(10);
+        setList.add(6);
+
+        System.out.print("Digite o número que você deseja encontrar: ");
+        int num = sc.nextInt();
+
+        String result = (setList.contains(num)) ? "O número " + num + " foi encontrado " : "O número " + num + " não foi encontrado!";
+
+        System.out.println(result);
 
         sc.close();
     }
@@ -28,26 +45,4 @@ public class Main {
             iteCom10.next();
         }
     }
-
-    public static void setTemOuNaoNumDig(Scanner sc) {
-        Set<Integer> setList = new HashSet<>();
-        setList.add(2);
-        setList.add(5);
-        setList.add(1);
-        setList.add(3);
-        setList.add(4);
-        setList.add(9);
-        setList.add(7);
-        setList.add(8);
-        setList.add(10);
-        setList.add(6);
-
-        System.out.print("Digite o número que você deseja encontrar: ");
-        int num = sc.nextInt();
-
-        String result = (setList.contains(num)) ? "O número " + num + " foi encontrado " : "O número " + num + " não foi encontrado!";
-
-        System.out.println(result);
-    }
-
 }
