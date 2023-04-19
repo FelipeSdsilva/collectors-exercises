@@ -6,15 +6,8 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-
-        acharUmNumeroEmUmArrayList(sc);
-
-        sc.close();
-
-    }
-
-    public static void coresFavoritas(Scanner sc) {
-        ArrayList<String> cores = new ArrayList<>();
+        
+         ArrayList<String> cores = new ArrayList<>();
 
         System.out.println("Digite 5 cores: ");
         for (int i = 0; i < 5; i++) {
@@ -28,7 +21,11 @@ public class Main {
         System.out.println("Ordenar as cores: ");
         cores.forEach(System.out::println);
 
+        sc.close();
+
     }
+
+ 
 
     public static void acharUmNumeroEmUmArrayList(Scanner sc) {
         ArrayList<Integer> arrayList = new ArrayList<>();
