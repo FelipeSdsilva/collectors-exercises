@@ -5,7 +5,7 @@ import java.util.Queue;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws RuntimeException {
         Scanner sc = new Scanner(System.in);
         String name;
 
@@ -32,10 +32,13 @@ public class Main {
                     }
                 }
                 case 3 -> {
-                    clientes.remove();
-                    System.out.println("Fila: ");
-                    clientes.forEach(System.out::println);
-                    System.out.println((clientes.isEmpty()) ? "A Fila está vazia!" : "Cliente foi chamado! ");
+                    if (clientes.isEmpty()) System.out.println("A Fila está vazia!");
+                    else {
+                        clientes.remove();
+                        System.out.println("Fila: ");
+                        clientes.forEach(System.out::println);
+                        System.out.println("Cliente foi chamado! ");
+                    }
                 }
                 case 0 -> finalMenu();
                 default -> System.out.println("Opção invalida!!");
