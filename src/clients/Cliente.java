@@ -4,19 +4,17 @@ public class Cliente {
 
     private String name;
     private int idade;
+    private String email;
 
-    private String emil;
-    private String cpf;
     private String endereco;
 
     public Cliente() {
     }
 
-    public Cliente(String name, int idade, String emil, String cpf, String endereco) {
+    public Cliente(String name, int idade, String email, String endereco) {
         this.name = name;
         this.idade = idade;
-        this.emil = emil;
-        this.cpf = cpf;
+        this.email = email;
         this.endereco = endereco;
     }
 
@@ -36,21 +34,14 @@ public class Cliente {
         this.idade = idade;
     }
 
-    public String getEmil() {
-        return emil;
+    public String getEmail() {
+        return email;
     }
 
-    public void setEmil(String emil) {
-        this.emil = emil;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
 
     public String getEndereco() {
         return endereco;
@@ -60,13 +51,6 @@ public class Cliente {
         this.endereco = endereco;
     }
 
-    public String vizualizar() {
-        return "Cliente{" +
-                "name='" + name + '\'' +
-                ", idade=" + idade +
-                ", emil='" + emil + '\'' +
-                ", cpf='" + cpf + '\'' +
-                ", endereco='" + endereco + '\'' +
-                '}';
+    public void vizualizar() {
     }
 }
